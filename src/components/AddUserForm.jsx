@@ -15,7 +15,7 @@ const AddUserForm = (props) => {
     /**
      * Funcion que agrega un usuario a la lista de users
      * @param {*} data Lista de usuarios
-     * @param {*} e Limpia el formulario despues de presionar el boton
+     * @param {*} e Estado que permite limpiar el formulario al presionar el boton
      */
     const onSubmit = (data,e)=>{
         props.addUser(data);

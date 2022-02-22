@@ -1,6 +1,8 @@
+
 /**
- * Componente que se encarga de mostrar la tabla con los usuarios guardados
- * La propiedad que recibe es una lista de usuarios con sus valores de atributos, los culaes se incluyen en la tabla
+ * Componente qque devuelve na tabla con la lista de usuarios
+ * @param {*} props Lista de usuarios guardados o registrados
+ * @returns Tabla con los valores de atributos de los usuarios guardados
  */
 const UserTable = (props) => {
 

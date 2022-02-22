@@ -33,6 +33,15 @@ function App() {
     ])
   }
 
+
+  /**
+   * Función para eliminar un usuario
+   * @param {*} id Identificador del usuario a eliminar
+   */
+  const deleteUser = (id) =>{
+    setUsers(users.filter(user => user.id !== id))
+  }
+
   /**
    * Estado que permite saber si se va a actualizar un usuario o crear uno nuevo
    */
@@ -66,7 +75,6 @@ function App() {
     setUsers(users.map((user)=>(user.id === id ? updateUser : user)))
   }
 
-
   return (
     <div className="container">
       <h1>Crud App with hooks</h1>
@@ -88,10 +96,11 @@ function App() {
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <UserTable users={users} editRow={editRow}/>
+          <UserTable users={users} deleteUser={deleteUser} editRow={editRow}/>
         </div>
       </div>
     </div>
+
   );
 }
 
